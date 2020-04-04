@@ -1,0 +1,61 @@
+<html>
+    <head>        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Certificates123</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139520833-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-139520833-1');
+        </script>
+
+        {% load static %}
+        <link href="{% static 'css/bootstrap.min.css' %}" rel='stylesheet'>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <style>
+            label {
+                margin-top: 5px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            .user-form {
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body style="background: rgba(0, 0, 0, .075);">
+            <nav class="navbar navbar-dark bg-dark">
+                <span class="navbar-brand mb-0 h1">CERTIFICATES123</span>
+            </nav>
+        <div class="container-fluid">
+        </div>
+        <div class="container" style="color: background(255, 255, 255, .95)">
+            <div class="row" style="margin-top: 20px; margin-bottom: 50px;">
+                <div class="col-md-8 offset-md-2 text-center" style="font-size: 2rem; color: rgba(0, 0, 0, 0.5); font-style: italic;">
+                    "When the snows fall and the white winds blow, <br/> The lone wolf dies but the pack survives"
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 80px;">
+                <div class="col-md-8 offset-md-2">
+                    <h5>Fill the form below to create your certificate!</h5>
+                    <h6>Let's beat the system together.</h6>
+                    <form method="POST" class="user-form">{% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="save btn btn-default form-control">Create Certificate</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark text-center" style="position: fixed; bottom: 0; width: 100%; font-size: 0.75rem;">
+            <div class="col-md-6" style="color: rgba(255, 255, 255, .95)">For feedback/contributions/donations, reach me at: <a href='mailto:atisayajain@gmail.com'>atisayajain@gmail.com</a></div>
+            <div class="col-md-3 offset-md-3" style="color: rgba(255, 255, 255, .95)">Made with <i style="color: rgb(255, 0, 0)" class="fas fa-heart"></i> by <a href='https://github.com/atisayajain'>atisayajain</a></div>
+        </nav>
+        <script src="{% static 'js/jquery.slim.min.js' %}" crossorigin="anonymous"></script>
+        <script src="{% static 'js/popper.min.js' %}" crossorigin="anonymous"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}" crossorigin="anonymous"></script>
+    </body>
+</html>
